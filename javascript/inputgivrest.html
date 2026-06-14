@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Bill Calculator </h1>
+    <input id = "amount" type = "number" placeholder="Enter amount">
+    <button onclick = "addAmount()"> Add </button>
+    <button onclick = "calculateBill()"> Calculate Bill</button>
+    <h3> Added items: </h3>
+    <p id = "list" > </p>  
+    <h2> Total:</h2>
+    <p id = "total"></p>
+    <script>
+        let amounts = [];
+        function addAmount() {
+            let value = Number(document.getElementById("amount").value);
+            if(value<=0 || isNaN(value)) { 
+                alert("Please enter a valid amount"); 
+                return;
+            }
+            amounts.push(value);
+            document.getElementById("list").innerText = amounts.join(",");
+            document.getElementById("amount").value = "";
+        }
+        function getTotal(...nums){
+            return nums.reduce((sum, num) => sum + num, 0);
+        }
+         function calculateBill() {
+            let total = getTotal(...amounts); // spread into rest
+
+            document.getElementById("total").innerText = total;
+        }
+    </script> 
+</body>
+</html>

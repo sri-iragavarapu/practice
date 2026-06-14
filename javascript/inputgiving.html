@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input</title>
+</head>
+<body>
+    <h1> NAMES LIST </h1>
+    <ol id="list">
+        <li> Sri </li>
+    </ol>
+    <input type="text" id = "userinput" placeholder="Enter a name">
+    <button type="submit" id="addbtn" onclick="code()">Add</button>
+    <script>
+        let list = document.getElementById("list");
+        let userinput = document.getElementById("userinput");
+        function code(){
+             if(userinput.value.trim() == "") {
+        alert("Please enter a name");
+        return;
+    }
+            let li = document.createElement("li");
+            li.append(userinput.value);
+            list.append(li);
+            userinput.value = "";
+        }
+
+
+    </script>
+    
+
+</body>
+</html>

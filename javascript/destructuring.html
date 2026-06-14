@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie tickets booking using destrucuring</title>
+    <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(136, 92, 138, 0.904);
+        
+    }
+    div{
+        background-color: rgb(255, 255, 255);
+        color:black;
+        margin:10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:80%;
+        
+    }
+    .ticketcard{
+        background-color: rgb(177, 115, 174);
+        color:white;
+        border-radius: 5px;
+        text-align: center;
+        width: 70%;
+        height: 90px;
+    }
+    h1{
+        text-align: center;
+    }
+    button{
+        border-radius: 5px;
+        padding:5px;
+    }
+    button:hover{
+        padding:8px;
+        color:white;
+        background-color:rgb(93, 201, 83);
+    }
+    .latest{
+        border-left:5px solid green;
+        background-color: #d9ffd9;
+        color:black;
+    }
+    </style>
+</head>
+<body>
+    <div class = "main1">
+        <h1> Movie Tickets </h1>
+        <div id = "moviecontainer1"></div>
+    </div>
+    <div class ="main2">
+        <h1> Booked Movie Tickets</h1>
+        <div id = "moviecontainer2"></div>
+    </div>
+    <div class = "main3">
+        <h1> Notifications </h1>
+        <div id="notificationContainer"></div>
+    </div>
+    <script>
+        const movies = [
+            { name: "Life of pie" }, 
+            { name: "Frozen Princess" },
+            { name: "Insideout"}
+    ];
+        let bookedmovies = [];
+        let notifications = [];
+        movies.forEach(function({name}, index){ 
+        document.getElementById("moviecontainer1").innerHTML += `
+        <div class = "ticketcard"> 
+        <p><b> ${name} </b></p>
+        <button onclick = "btnclick(${index})"><b>Book Ticket</b></button>
+        </div>
+        `
+        });
+        
+        function btnclick(index){
+        bookedmovies= [movies[index], ...bookedmovies]
+        notifications.unshift("Ticket booked for "+ movies[index].name);
+        displaybookings();
+        showNotifications();
+        };
+        function displaybookings(){
+            let output = "";
+            bookedmovies.forEach(function({name}){
+            output += `
+            <div class = "ticketcard">
+            <p><b>${name}</b></p>
+            <button><b>Booked</b></button>
+            </div>
+            `
+            document.getElementById("moviecontainer2").innerHTML = output;
+            });
+        }
+        function showNotifications(){
+            const notificationDiv = document.getElementById("notificationContainer");
+            const[latestNotification, ...oldNotifications] = notifications;;
+            let output = "";
+            if(latestNotification){
+                output += `
+                <div class = "ticketcard latest">
+                    <p><b>Latest Notifications</b></p>
+                    <p>${latestNotification}</p>
+                </div>
+                `;
+            }
+            oldNotifications.forEach(function(notification){
+                output += `
+                <div class = "ticketcard">
+                    <p>${notification}</p>
+                </div>
+                `;
+            });
+            notificationDiv.innerHTML = output;
+        }
+    </script>
+</body>
+</html>

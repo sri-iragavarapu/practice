@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Assignment</title>
+     <style>
+     body{
+        font-family: Arial;
+        background: #f4f4f4;
+        display:flex;
+        justify-content: center;
+     }
+     .card{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      padding: 20px 20px 30px 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin:20px;
+      border: 1px solid rgb(0, 0, 0);
+      text-align: center;
+      width:60%;
+      height:30%;
+      back
+    }
+
+    button {
+      display: block;
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid black;
+      border-radius: 10px;
+
+    }
+    button:hover{
+        background-color: rgb(66, 64, 64);
+        color:white;
+        transition: 0.3s;
+    }
+    .output {
+      margin-bottom:5px;
+      color: rgb(8, 161, 8);
+      font-weight:bolder;
+    }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    function Student(name, course){
+        this.name = name;
+        this.course = course;
+    }
+    Student.prototype.login = function () {
+        return this.name + " logged in";
+    };
+    Student.prototype.watchLecture = function () {
+        return this.name + " is watching lecture";
+    };
+    Student.prototype.submitAssignment = function () {
+        return this.name + " submitted assignment";
+    };
+    Student.prototype.downloadCertificate = function () {
+        return this.name + " downloaded certificate";
+    };
+    let students = [
+        new Student("Sri", "JavaScript"),
+        new Student("Ramya", "JavaScript"),
+        new Student("Harshitha", "JavaScript")
+    ];
+    let container = document.getElementById("container");
+    students.forEach((student, index) => {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+        <h3> ${student.name} - ${student.course} </h3>
+        <div class="output" id="output-${index}"></div>
+        <button onclick = "login(${index})">Login</button>
+        <button onclick = "watchLecture(${index})">Watch Lecture</button>
+        <button onclick = "submitAssignment(${index})">Submit Assignment</button>
+        <button onclick = "downloadCertificate(${index})">Download Certificate</button>
+
+        `;
+        container.appendChild(card);
+    });
+    function login(i){
+        let msg = students[i].login();
+        document.getElementById("output-"+i).innerText = msg;
+    }
+    function watchLecture(i){
+        let msg = students[i].watchLecture();
+        document.getElementById("output-"+i).innerText = msg;
+    }
+    function submitAssignment(i){
+        let msg = students[i].submitAssignment();
+        document.getElementById("output-"+i).innerText = msg;
+    }
+    function downloadCertificate(i){
+        let msg = students[i].downloadCertificate();
+        document.getElementById("output-"+i).innerText = msg;
+    } 
+</script>
+</body>
+</html>

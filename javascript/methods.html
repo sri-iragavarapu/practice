@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js methods </title>
+</head>
+<body>
+    <!--Js String Methods-->
+    <h2>-- JS STRING METHODS --</h2>
+    <h3> Converting string into an array using split() </h3>
+    <p id="method1"></p>
+    <h3> Adding Javascript word at start of this array using splice() </h3>
+    <p id="method2"></p>
+    <h3> Reversing array using toReversed() and store it in reverse variable </h3>
+    <p id="method3"></p>
+    <h3> Removing last element(this) from reverse variable using pop()</h3>
+    <p id="method4"></p>
+    <h3> Adding surname at start of reverse variable using unshift() </h3>
+    <p id="method5"></p>
+    <h3> Removing first element(this) from converted variable using shift()</h3>
+    <p id="method6"></p>
+    <h3> Adding surname at start of converted variable using unshift() </h3>
+    <p id="method7"></p>
+
+    <!--Js Functions-->
+    <h2> -- JS FUNCTION --</h2>
+    <h3> To display words with length more than 4 using filter()</h3>
+    <p id="method8"></p>
+    <h3> To display words starting with b using find()</h3>
+    <p id="method9"></p>
+    <h3> To find each word having i using every()</h3>
+    <p id="method10"></p>
+
+
+    <script>
+        // Js String Methods
+        const str = "This project belongs to sri";
+        const converted = str.split(" ");
+        document.getElementById("method1").innerHTML = converted.join(" ");
+        converted.splice(1, 0, "Javascript");
+        document.getElementById("method2").innerHTML = converted.join(" ");
+        reverse=converted.toReversed();
+        document.getElementById("method3").innerHTML = reverse.join(" ");
+        reverse.pop();
+        document.getElementById("method4").innerHTML = reverse.join(" ");
+        reverse.unshift("Iragavarapu");
+        document.getElementById("method5").innerHTML = reverse.join(" ");
+        converted.shift();
+        document.getElementById("method6").innerHTML = converted.join(" ");
+        converted.unshift("Iragavarapu");
+        document.getElementById("method7").innerHTML = converted.join(" ");
+    
+        // Js Functions
+       function checklength(word){
+          return  word.length>4;
+       }
+       const filteredwords = converted.filter(checklength);
+       document.getElementById("method8").innerHTML = "Words more than length 4:" + filteredwords.join(" ");
+
+       function checkb(word){
+        return word.startsWith("b");
+       }
+       const bwords = converted.find(checkb);
+       document.getElementById("method9").innerHTML = "Words starting with b: " + bwords;
+
+       function checki(word){
+        return word.startsWith("i");
+       }
+       const iwords = converted.every(checki);
+       document.getElementById("method10").innerHTML = "Is all words in the content having i ?" + iwords;
+       
+       
+
+
+        
+        
+    </script>
+</body>
+</html>

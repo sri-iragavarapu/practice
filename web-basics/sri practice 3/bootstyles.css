@@ -1,0 +1,14 @@
+header{
+    background-color:slategrey;
+    text-align: center;
+    color:white;
+}
+.left ul li{
+list-style: none;
+}
+footer{
+    background-color:slategrey;
+    text-align: center;
+    color:white;
+}
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number Finding</title>
+</head>
+<body>
+      <script>
+        let num = [56, 34, 88, 1, 465, 23, 654, 2, 43];
+        let result = num.reduce((acc, cur) => acc > cur? acc:cur);
+        document.write("Largest Number is: ", result);
+        let result1 = num.reduce((acc, cur) => Math.max(acc, cur));
+        document.write("<br>",result1);
+      </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.container{
+    padding:10px;
+    border:1px solid black; 
+    background-color: aqua;
+}
+.container-inner{
+height:auto;
+ border:1px solid black; 
+}
+header{
+    height:20px;
+}
+.fruits{ 
+    background-color: rgb(153, 165, 42);
+    width:20%;
+   
+}
+.fruits ul li{
+list-style:none;
+text-align: left;
+}
+.rightpart{
+    padding:10px;
+    display:inline-block;
+    width:80%;
+    background-color: aquamarine;
+}
+.firstrow{
+    display:inline-block;
+}
+.box1{
+    padding:20px;
+    background-color: aliceblue;
+    display:inline-block;
+}
+.box2{
+    padding:20px;
+    background-color: pink;
+display:inline-block;
+}
+.box3{
+    padding:20px;
+    background-color: rgb(255, 162, 0);
+    display:inline-block;
+}
+.box4{
+    padding:20px;
+    background-color: blue;
+    display:inline-block;
+}
+.box5{
+    padding:20px;
+    background-color: chartreuse;
+    display:inline-block;
+}
+.box6{
+    padding:20px;
+    background-color: rgb(0, 162, 255);
+    display:inline-block;
+}
+.box7{
+    padding:20px;
+    background-color: rgb(255, 0, 0);
+    display:inline-block;
+}
+.box8{
+    padding:20px;
+    background-color: rgb(98, 0, 255);
+    display:inline-block;
+}
+.photo{
+    align-content: center;
+    padding:25px 25px;
+}
+.details ul li {
+  list-style: none;
+}
+.details ul{
+    padding:0px;
+}
+.newdiv{
+    display:flex;
+    justify-content: flex-end;
+}
+button:hover{
+    color:white;
+    background-color:lightskyblue;
+}

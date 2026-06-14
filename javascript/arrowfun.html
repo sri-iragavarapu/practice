@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1> Normal function vs Arrow function </h1>
+    <p id = "output1"></p>
+    <p id = "output2"></p>
+    <script>
+        const details = {
+            name: "Krishna",
+            normalfunction: function() {
+                document.getElementById("output1").innerHTML = "<b> Normal function: </b>" + this.name;
+            },
+            arrowfunction: function() {
+                let self = this;
+                const inner = () => {
+                    document.getElementById("output2").innerHTML = "<b> Arrow function: </b>" + self.name;
+                };
+                inner();
+            } 
+        };
+        details.normalfunction();
+        details.arrowfunction();
+    </script>
+</body>
+</html>

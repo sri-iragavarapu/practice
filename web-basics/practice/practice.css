@@ -1,0 +1,31 @@
+header{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding:20px;
+}
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+    border:2px solid black;
+    margin:0 100px;
+    padding:40px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.346);
+   
+}
+button:hover{
+    background-color: rgb(6, 6, 6);
+    color:white;
+}
+input{
+    border-radius: 10px;
+    margin:5px;
+    padding:10px;
+}
+button{
+    border-radius: 10px;
+    padding:9px 20px;
+}

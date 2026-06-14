@@ -1,0 +1,50 @@
+
+<!--Js basics -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Javascript basics </title>
+    
+    <style>
+      body{
+align-items: center;
+
+}
+.card{
+  border:2px solid black;
+  padding:25px;
+  margin:5px;
+  border-radius:10px;
+  width:30%;
+}
+    </style>
+  </head>
+  <body>
+      <h1> Profile Cards </h1>
+      <div class="cardcontainer"></div>
+      <script>
+        const p1 = {
+          name:"Sri",
+          age:20,
+          profession:"Python Developer"
+        };
+        const p2 = {
+          name:"Ramya",
+          age:24,
+          profession:"Java Developer"
+        };
+        document.querySelector(".cardcontainer").innerHTML =`
+        <div class = "card">
+        <p> <b> Name: </b> ${p1.name} </p>
+        <p> <b> Age: </b> ${p1.age} </p>
+        <p> <b> Profession: </b> ${p1.profession} </p>
+        </div>
+        <div class = "card">
+        <p> <b> Name: </b> ${p2.name} </p>
+        <p> <b> Age: </b> ${p2.age} </p>
+        <p> <b> Profession: </b> ${p2.profession} </p>
+        </div>
+        `;
+      </script>
+  </body>
+</html>

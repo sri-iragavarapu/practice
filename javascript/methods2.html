@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Getting details using call(), apply(), bind()</h1>
+    <button onclick = "usingcall()"> Using call() </button>
+    <button onclick = "usingapply()"> Using apply() </button>
+    <button onclick = "usingbind()"> Using bind() </button>
+    <p id="content"></p>
+    <script>
+        function fun(city, country){
+            document.getElementById("content").innerHTML = 
+            "<b>Name:</b> "+ this.name + "<br><b> Age: </b>" + this.age + "<br><b> City: </b>" + city + "<br><b>Country: </b>" + country;
+        }
+        const student1 = {
+            name: "Sri",
+            age:50
+        };
+        const student2 = {
+            name: "Rama",
+            age:30
+        };
+        const student3 = {
+            name: "Sai",
+            age:70
+        };
+        function usingcall(){
+            fun.call(student1, "Kakinada", "India");
+        }
+        function usingapply(){
+            fun.apply(student2, ["vizag", "India"]);
+        }
+        function usingbind(){
+            const result = fun.bind(student3, "hyderabad", "India");
+            result();
+        }
+          
+    
+</script>
+</body>
+</html>
