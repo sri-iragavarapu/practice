@@ -1,0 +1,39 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.container{
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding:20px;
+  margin:2% 10%;
+  background-color: rgb(173, 169, 169);
+}
+.card{
+  background: white;
+  padding: 20px;
+  margin:15px auto;
+  width: 350px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px lightgray;
+}
+input{
+  display: black;
+  width: 90%;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 5px;
+}
+button{
+  margin: 5px;
+  padding: 10px 15px;
+  cursor:pointer;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: black;
+  color:white;
+  transition: 0.5s;
+}
