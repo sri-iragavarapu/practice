@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Ananya Rao",
+    "email": "ananya@gmail.com",
+    "phone": "9876543210",
+    "image": "https://randomuser.me/api/portraits/women/10.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vikram Singh",
+    "email": "vikram@gmail.com",
+    "phone": "9123456789",
+    "image": "https://randomuser.me/api/portraits/men/11.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ritika Sharma",
+    "email": "ritika@gmail.com",
+    "phone": "9988776655",
+    "image": "https://randomuser.me/api/portraits/women/12.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Aditya Reddy",
+    "email": "aditya@gmail.com",
+    "phone": "9871234567",
+    "image": "https://randomuser.me/api/portraits/men/13.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Megha Patel",
+    "email": "megha@gmail.com",
+    "phone": "9123123123",
+    "image": "https://randomuser.me/api/portraits/women/14.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Karthik Verma",
+    "email": "karthik@gmail.com",
+    "phone": "9988998899",
+    "image": "https://randomuser.me/api/portraits/men/15.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Nisha Gupta",
+    "email": "nisha@gmail.com",
+    "phone": "9874561230",
+    "image": "https://randomuser.me/api/portraits/women/16.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Aman Kumar",
+    "email": "aman@gmail.com",
+    "phone": "9998887776",
+    "image": "https://randomuser.me/api/portraits/men/17.jpg"
+  }
+]
